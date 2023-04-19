@@ -26,20 +26,42 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## Procedure
+It can be implemented using two half subtractors and one OR gate as: Giving one half subtractor the inputs A and B that gives outputs Diff1 and B1. Giving second half subtractor inputs Bin and Diff1 from first subtractor that gives outputs B2 and D (difference for the full subtractor).
 
 
 
-Write the detailed procedure here 
 
 
 ## Program:
-/*
+```py
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:R.Kavi Keerthana 
+RegisterNumber:212222100022
+
+module half_sub(x, y, d, b, x1);
+input x,y;
+output x1, d, b;
+xor(d, x, y);
+not(x1, x);
+and(b, x1, y);
+endmodule
+
+module full_sub(x, y, z, d, b, x1, x2, x3, x4, x5);
+input x,y,z;
+output d, b, x1, x2, x3, x4 ,x5;
+xor(x1, x, y);
+xor(d, x1, z);
+not(x2, x);
+and(x3, x2, y);
+and(x4, x3, z);
+and(x5, y, z);
+or(b, x3, x4, x5);
+endmodule
+
+```
 
 ## Output:
+
 
 ## Truthtable
 
