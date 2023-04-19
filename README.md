@@ -61,16 +61,20 @@ endmodule
 ```
 
 ## Output:
+##  RTL realization
+![exp 4 rtl1 (7)](https://user-images.githubusercontent.com/120431120/232969650-9d1b668d-efdc-46ef-8a1b-fbad6abb45c7.png)
 
+
+![exp4 rtl2 (1)](https://user-images.githubusercontent.com/120431120/232970030-9924c3fc-38ae-4738-a671-be78be06bf2c.png)
+
+## Timing diagram 
+![exp4 wf1 (2)](https://user-images.githubusercontent.com/120431120/232970335-f356e405-fe14-46b3-a17b-f175538c19e1.png)
+
+![exp 4 wf2 (2)](https://user-images.githubusercontent.com/120431120/232970454-6fa33e50-fa14-4893-be14-0e479ae21e3f.png)
 
 ## Truthtable
 
-
-
-##  RTL realization
-
-
-## Timing diagram 
+![exp4 tt (1)](https://user-images.githubusercontent.com/120431120/232970531-7c14c921-139f-456a-8a78-0e705401b4f8.png)
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
