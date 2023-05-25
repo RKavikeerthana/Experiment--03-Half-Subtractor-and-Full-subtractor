@@ -38,43 +38,36 @@ Program to design a half subtractor and full subtractor circuit and verify its t
 Developed by:R.Kavi Keerthana 
 RegisterNumber:212222100022
 
-module half_sub(x, y, d, b, x1);
-input x,y;
-output x1, d, b;
-xor(d, x, y);
-not(x1, x);
-and(b, x1, y);
-endmodule
+Half subtractor: module halfsubtractor(A,B,Difference,Borrow); input A,B; output Difference,Borrow; assign Difference = (A^B); assign Borrow = (~A&B); endmodule
 
-module full_sub(x, y, z, d, b, x1, x2, x3, x4, x5);
-input x,y,z;
-output d, b, x1, x2, x3, x4 ,x5;
-xor(x1, x, y);
-xor(d, x1, z);
-not(x2, x);
-and(x3, x2, y);
-and(x4, x3, z);
-and(x5, y, z);
-or(b, x3, x4, x5);
-endmodule
-
+Full subtractor: module fullsub(A,B,C,Difference,Borrow); input A,B,C; output Difference,Borrow; assign Difference = (A^B^C); assign Borrow = (~A&(B^C)|(B&C)); endmodule */
 ```
 
 ## Output:
-##  RTL realization
-![exp 4 rtl1 (7)](https://user-images.githubusercontent.com/120431120/232969650-9d1b668d-efdc-46ef-8a1b-fbad6abb45c7.png)
-
-
-![exp4 rtl2 (1)](https://user-images.githubusercontent.com/120431120/232970030-9924c3fc-38ae-4738-a671-be78be06bf2c.png)
-
-## Timing diagram 
-![exp4 wf1 (2)](https://user-images.githubusercontent.com/120431120/232970335-f356e405-fe14-46b3-a17b-f175538c19e1.png)
-
-![exp 4 wf2 (2)](https://user-images.githubusercontent.com/120431120/232970454-6fa33e50-fa14-4893-be14-0e479ae21e3f.png)
+## Logic gates:
+## FULL SUBTRACTOR:
+![image](https://github.com/RKavikeerthana/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120431120/bd74b2c4-7941-45e2-889c-6ddf1cce44ca)
+## HALF SUBTRACTOR:
+![image](https://github.com/RKavikeerthana/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120431120/4b205095-5c00-405a-a890-721367741c41)
 
 ## Truthtable
+## FULL SUBTRACTOR:
+![image](https://github.com/RKavikeerthana/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120431120/25c66cf8-1b70-4096-acc1-0158339416b1)
 
-![exp4 tt (1)](https://user-images.githubusercontent.com/120431120/232970531-7c14c921-139f-456a-8a78-0e705401b4f8.png)
+## HALF SUBTRACTOR:
+![image](https://github.com/RKavikeerthana/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120431120/217c8a17-2860-496c-949a-20ba6531b114)
+## RTL realization
+## FULL SUBTRACTOR:
+![image](https://github.com/RKavikeerthana/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120431120/31535c43-32b3-46ff-8af3-67927803b889)
+## HALF SUBTRACTOR:
+![image](https://github.com/RKavikeerthana/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120431120/0353f588-9a7e-48e7-b5d4-595539c4eade)
+## Timing diagram
+## FULL SUBTRACTOR:
+![image](https://github.com/RKavikeerthana/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120431120/310f5a1c-c06f-4d56-ac8d-68c94fefa3fa)
+## HALF SUBTRACTOR:
+![image](https://github.com/RKavikeerthana/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/120431120/ebc1b520-2af2-4b3b-affc-a64e9ad20aed)
+
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
